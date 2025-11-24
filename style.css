@@ -1,21 +1,25 @@
 /* --- CSS Variables / Colors --- */
 :root {
-    /* YOUR NEW PALETTE */
-    --primary-color: #384CFF;
-    /* Electric Blue - Main Identity */
-    --secondary-color: #5E5EDF;
-    /* Muted Blue - Contact BG & Hovers */
-    --accent-soft: #A09ACA;
-    /* Muted Purple - Icons & Subtitles */
-    --bg-warm: #FFF6D3;
-    /* Pale Yellow - Light Sections */
-    --bg-pastel: #EFD2E8;
-    /* Light Pink - Cards/Accents */
+    /* MAIN PALETTE: Blues & Greys */
+    --primary-blue: #384CFF;
+    /* Electric Blue - Primary Actions/Titles */
+    --secondary-blue: #5E5EDF;
+    /* Muted Blue - Hover states */
+
+    --bg-light-grey: #F4F6F8;
+    /* Very Light Grey - Section Backgrounds */
+    --bg-dark-grey: #222222;
+    /* Dark Grey - Contact & Footer BG */
+
+    /* SPECIFIC ACCENT */
+    --text-pink-accent: #EFD2E8;
+    /* Only for small text on dark backgrounds */
 
     /* Standard Neutrals */
-    --text-dark: #2c3e50;
-    /* Dark Grey for readability */
-    --text-light: #666666;
+    --text-dark: #333333;
+    /* Main Body Text */
+    --text-grey: #666666;
+    /* Subtitles on light backgrounds */
     --white: #ffffff;
 
     /* Font Settings */
@@ -45,7 +49,7 @@ h1,
 h2,
 h3 {
     font-family: var(--font-heading);
-    color: var(--primary-color);
+    color: var(--primary-blue);
     margin-bottom: 1rem;
 }
 
@@ -68,8 +72,7 @@ ul {
 /* --- Header --- */
 #main-header {
     background: var(--white);
-    box-shadow: 0 2px 10px rgba(56, 76, 255, 0.1);
-    /* Blue tinted shadow */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     position: fixed;
     top: 0;
     width: 100%;
@@ -89,7 +92,7 @@ ul {
 .logo-text {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--primary-color);
+    color: var(--primary-blue);
     display: flex;
     flex-direction: column;
     line-height: 1.2;
@@ -98,8 +101,7 @@ ul {
 .logo-text .subtitle {
     font-size: 0.8rem;
     font-family: var(--font-body);
-    color: var(--accent-soft);
-    /* Muted Purple */
+    color: var(--text-grey);
     font-weight: 400;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -120,19 +122,18 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: var(--primary-color);
+    color: var(--primary-blue);
 }
 
 .btn-contact {
-    background-color: var(--primary-color);
+    background-color: var(--primary-blue);
     color: var(--white) !important;
     padding: 10px 20px;
     border-radius: 30px;
-    /* More modern rounded look */
 }
 
 .btn-contact:hover {
-    background-color: var(--secondary-color);
+    background-color: var(--secondary-blue);
     transform: translateY(-2px);
 }
 
@@ -140,14 +141,14 @@ nav ul li a:hover {
     display: none;
     font-size: 1.5rem;
     cursor: pointer;
-    color: var(--primary-color);
+    color: var(--primary-blue);
 }
 
 /* --- Hero Section --- */
 .hero {
     height: 80vh;
-    /* Using a gradient overlay with your palette colors */
-    background: linear-gradient(rgba(56, 76, 255, 0.3), rgba(94, 94, 223, 0.4)), url('https://images.unsplash.com/photo-1573497620053-ea5300f94f21?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+    /* Blue/Grey Gradient Overlay */
+    background: linear-gradient(rgba(34, 34, 34, 0.4), rgba(56, 76, 255, 0.3)), url('https://images.unsplash.com/photo-1573497620053-ea5300f94f21?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
     position: relative;
     display: flex;
     align-items: center;
@@ -162,14 +163,13 @@ nav ul li a:hover {
     color: var(--white);
     max-width: 700px;
     padding: 40px;
-    background: rgba(255, 255, 255, 0.9);
-    /* White box to make text pop */
-    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 4px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .hero-content h1 {
-    color: var(--primary-color);
+    color: var(--primary-blue);
     font-size: 3rem;
     margin-bottom: 20px;
 }
@@ -182,18 +182,18 @@ nav ul li a:hover {
 
 .btn-main {
     display: inline-block;
-    background: var(--primary-color);
+    background: var(--primary-blue);
     color: var(--white);
     padding: 12px 30px;
     border-radius: 30px;
     font-weight: bold;
     text-transform: uppercase;
-    border: 2px solid var(--primary-color);
+    border: 2px solid var(--primary-blue);
 }
 
 .btn-main:hover {
-    background: var(--white);
-    color: var(--primary-color);
+    background: transparent;
+    color: var(--primary-blue);
 }
 
 /* --- Generic Section Styles --- */
@@ -206,7 +206,7 @@ section {
     font-size: 2.2rem;
     margin-bottom: 60px;
     position: relative;
-    color: var(--primary-color);
+    color: var(--primary-blue);
 }
 
 .section-title::after {
@@ -214,8 +214,7 @@ section {
     display: block;
     width: 60px;
     height: 4px;
-    background: var(--bg-pastel);
-    /* Pink underline */
+    background: var(--secondary-blue);
     margin: 15px auto 0;
 }
 
@@ -223,14 +222,14 @@ section {
     background-color: var(--white);
 }
 
-/* Replaced generic dark section with your Pale Yellow */
 .section-dark {
-    background-color: var(--bg-warm);
+    background-color: var(--bg-light-grey);
+    /* Now Light Grey instead of Yellow */
 }
 
-/* Replaced generic color section with your Muted Blue */
+/* Special Dark Grey Section for Contact */
 .section-color {
-    background-color: var(--secondary-color);
+    background-color: var(--bg-dark-grey);
     color: var(--white);
 }
 
@@ -258,25 +257,25 @@ section {
 
 .feature-list li::before {
     content: '✔';
-    color: var(--primary-color);
+    color: var(--secondary-blue);
     font-weight: bold;
     position: absolute;
     left: 0;
 }
 
 .placeholder-img {
-    background-color: var(--bg-pastel);
-    /* Pink background for image placeholder */
+    background-color: var(--bg-light-grey);
     height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 8px;
-    color: var(--primary-color);
+    border-radius: 4px;
+    color: var(--text-grey);
     font-weight: bold;
+    border: 1px solid #e1e1e1;
 }
 
-/* --- Section 2: Syntone (On Pale Yellow BG) --- */
+/* --- Section 2: Syntone --- */
 .content-centered {
     text-align: center;
     max-width: 800px;
@@ -287,7 +286,7 @@ section {
     font-size: 1.1rem;
     margin-bottom: 50px;
     font-style: italic;
-    color: var(--text-light);
+    color: var(--text-grey);
 }
 
 .cards-container {
@@ -299,9 +298,8 @@ section {
 .card {
     background: var(--white);
     padding: 30px;
-    border-radius: 8px;
-    border-top: 5px solid var(--accent-soft);
-    /* Muted Purple top border */
+    border-radius: 4px;
+    border-top: 5px solid var(--secondary-blue);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     flex: 1;
     transition: transform 0.3s;
@@ -309,7 +307,7 @@ section {
 
 .card:hover {
     transform: translateY(-5px);
-    border-top-color: var(--primary-color);
+    border-top-color: var(--primary-blue);
 }
 
 .card h3 {
@@ -328,30 +326,59 @@ section {
 .service-item {
     padding: 30px;
     background: var(--white);
-    border: 1px solid #f0f0f0;
-    border-radius: 8px;
+    border: 1px solid #eee;
+    border-radius: 4px;
     transition: 0.3s;
 }
 
 .service-item:hover {
-    box-shadow: 0 10px 20px rgba(56, 76, 255, 0.1);
-    border-color: var(--bg-pastel);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    border-color: var(--primary-blue);
 }
 
 .service-item .icon {
-    font-size: 3rem;
-    color: var(--accent-soft);
-    /* Muted Purple Icon */
+    /* This converts the text "family_restroom" into the actual Icon */
+    font-family: 'Material Symbols Rounded';
+
+    /* Sizing and Spacing to fit the box */
+    font-size: 3.5rem;
+    /* Large enough to be seen, small enough to fit */
+    line-height: 1;
+    /* Prevents extra vertical spacing */
     margin-bottom: 20px;
-    font-family: sans-serif;
+    display: inline-block;
+
+    /* Color from your Blue/Grey palette */
+    color: var(--primary-blue);
+
+    /* Refined Typography for the icon itself */
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-transform: none;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+
+    /* Modern Light/Thin Look settings */
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 300,
+        /* 300 is thinner/elegant. Change to 400 for standard. */
+        'GRAD' 0,
+        'opsz' 48;
+
+    /* Smooth rendering */
+    -webkit-font-smoothing: antialiased;
 }
 
-/* --- Section 4: Contact (On Muted Blue BG) --- */
+/* --- Section 4: Contact (Dark Grey BG) --- */
 .contact-subtitle {
     text-align: center;
     margin-bottom: 50px;
-    color: var(--bg-warm);
-    /* Pale yellow text */
+    /* PINK TEXT on Dark Background */
+    color: var(--text-pink-accent);
+    font-weight: 400;
 }
 
 .contact-wrapper {
@@ -362,7 +389,8 @@ section {
 
 .contact-info h3 {
     color: var(--white);
-    border-bottom: 1px solid var(--bg-pastel);
+    border-bottom: 1px solid var(--text-pink-accent);
+    /* Pink underline */
     padding-bottom: 15px;
     display: inline-block;
 }
@@ -370,26 +398,28 @@ section {
 .contact-info p {
     margin-bottom: 15px;
     font-size: 1.1rem;
+    color: #e0e0e0;
 }
 
 .map-placeholder {
     width: 100%;
     height: 200px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
     margin-top: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: var(--white);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-pink-accent);
+    /* Pink Text */
 }
 
 .contact-form {
     background: var(--white);
     padding: 30px;
-    border-radius: 8px;
+    border-radius: 4px;
     color: var(--text-dark);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .form-group {
@@ -400,7 +430,7 @@ section {
     display: block;
     margin-bottom: 5px;
     font-weight: 600;
-    color: var(--primary-color);
+    color: var(--primary-blue);
 }
 
 .form-group input,
@@ -411,20 +441,20 @@ section {
     border: 1px solid #ddd;
     border-radius: 4px;
     font-family: inherit;
-    background-color: #fcfcfc;
+    background-color: #f9f9f9;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--primary-color);
+    border-color: var(--primary-blue);
     background-color: var(--white);
 }
 
 .btn-submit {
     width: 100%;
     padding: 12px;
-    background-color: var(--primary-color);
+    background-color: var(--primary-blue);
     color: var(--white);
     border: none;
     border-radius: 30px;
@@ -435,32 +465,38 @@ section {
 }
 
 .btn-submit:hover {
-    background-color: var(--text-dark);
+    background-color: var(--secondary-blue);
 }
 
 /* --- Footer --- */
 footer {
-    background: var(--text-dark);
-    color: var(--bg-warm);
-    /* Pale yellow text */
-    padding: 20px 0;
+    background: #1a1a1a;
+    /* Slightly darker than Contact section */
+    color: #888;
+    padding: 30px 0;
     text-align: center;
     font-size: 0.9rem;
+    border-top: 1px solid #333;
 }
 
 .footer-links {
-    margin-top: 10px;
+    margin-top: 15px;
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
 .footer-links a {
-    color: var(--bg-pastel);
+    /* PINK TEXT on Dark Background */
+    color: var(--text-pink-accent);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
 }
 
 .footer-links a:hover {
     color: var(--white);
+    text-decoration: underline;
 }
 
 /* --- Responsive --- */
