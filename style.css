@@ -156,6 +156,68 @@ nav ul li a:hover {
     color: var(--primary-blue);
 }
 
+/* Responsive: Three-tier layout system */
+
+/* Tier 1: Small phones - SYNTONE MEDIATION + hamburger menu */
+@media (max-width: 640px) {
+    .brand-image {
+        display: none;
+    }
+
+    .logo {
+        margin-left: 0;
+        gap: 0;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
+}
+
+/* Tier 2: Tablets - Band + SYNTONE MEDIATION + hamburger menu */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .brand-image {
+        display: block;
+    }
+
+    .logo {
+        margin-left: -20px;
+        gap: 12px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
+}
+
+/* Tier 3: Desktop - Band + SYNTONE MEDIATION + full text menu */
+@media (min-width: 1025px) {
+    .brand-image {
+        display: block;
+    }
+
+    .logo {
+        margin-left: -20px;
+        gap: 12px;
+    }
+
+    nav {
+        display: flex;
+    }
+
+    .mobile-menu-icon {
+        display: none;
+    }
+}
+
 /* --- Hero Section --- */
 .hero {
     height: 85vh;
@@ -183,8 +245,9 @@ nav ul li a:hover {
 
 .hero-content h1 {
     color: var(--primary-blue);
-    font-size: 3.5rem;
-    margin-bottom: 10px;
+    font-size: 4rem;
+    margin-bottom: 5px;
+    line-height: 1.1;
 }
 
 .hero-subtitle {
@@ -193,6 +256,7 @@ nav ul li a:hover {
     color: var(--text-dark);
     margin-bottom: 20px;
     font-style: italic;
+    line-height: 1.2;
 }
 
 .hero-content p {
@@ -405,15 +469,20 @@ section {
     width: 100%;
 }
 
+.pricing-box h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
 .pricing-box .price {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     font-weight: 700;
     color: var(--primary-blue);
     margin: 10px 0;
 }
 
 .pricing-box .price-detail {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: var(--text-grey);
     font-weight: normal;
 }

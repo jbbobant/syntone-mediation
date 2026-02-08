@@ -23,8 +23,8 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#mediation">La Médiation</a></li>
                     <li><a href="#syntone">L'approche Syntone</a></li>
+                    <li><a href="#mediation">La Médiation</a></li>
                     <li><a href="#prestation">Nos Services</a></li>
                     <li><a href="#contact" class="btn-contact">Nous contacter</a></li>
                 </ul>
@@ -45,33 +45,7 @@
         </div>
     </section>
 
-    <section id="mediation" class="section-light">
-        <div class="container">
-            <h2 class="section-title">Qu'est-ce que la médiation ?</h2>
-            <div class="content-grid">
-                <div class="text-block">
-                    <p>La médiation est un processus volontaire et structuré qui permet aux personnes en conflit de
-                        redevenir actrices de la résolution de leur litige, sans passer par l'affrontement judiciaire.
-                    </p>
-                    <p>Elle est facilitée par un médiateur professionnel, tiers neutre, impartial et indépendant. Notre
-                        rôle n'est pas de trancher, mais de favoriser l'écoute et la compréhension pour construire une
-                        solution sur-mesure.</p>
-                    <ul class="feature-list">
-                        <li><strong>Rapide :</strong> Une résolution bien plus véloce que les délais judiciaires.</li>
-                        <li><strong>Coût maîtrisé :</strong> Des tarifs clairs et inférieurs à une procédure longue.
-                        </li>
-                        <li><strong>Confidentiel :</strong> Les échanges sont couverts par un strict secret.</li>
-                        <li><strong>Sécurisé :</strong> Des accords juridiquement solides.</li>
-                    </ul>
-                </div>
-                <div class="image-block placeholder-img">
-                    <span>Illustration : Roue de Fiutak / Processus</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="syntone" class="section-dark">
+    <section id="syntone" class="section-light">
         <div class="container">
             <h2 class="section-title">L'approche Syntone</h2>
             <div class="content-centered">
@@ -100,6 +74,32 @@
                         <p>Nous pratiquons principalement la médiation à plusieurs regards pour offrir un accompagnement
                             encore plus complet et équilibré.</p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="mediation" class="section-dark">
+        <div class="container">
+            <h2 class="section-title">Qu'est-ce que la médiation ?</h2>
+            <div class="content-grid">
+                <div class="text-block">
+                    <p>La médiation est un processus volontaire et structuré qui permet aux personnes en conflit de
+                        redevenir actrices de la résolution de leur litige, sans passer par l'affrontement judiciaire.
+                    </p>
+                    <p>Elle est facilitée par un médiateur professionnel, tiers neutre, impartial et indépendant. Notre
+                        rôle n'est pas de trancher, mais de favoriser l'écoute et la compréhension pour construire une
+                        solution sur-mesure.</p>
+                    <ul class="feature-list">
+                        <li><strong>Rapide :</strong> Une résolution bien plus véloce que les délais judiciaires.</li>
+                        <li><strong>Coût maîtrisé :</strong> Des tarifs clairs et inférieurs à une procédure longue.
+                        </li>
+                        <li><strong>Confidentiel :</strong> Les échanges sont couverts par un strict secret.</li>
+                        <li><strong>Sécurisé :</strong> Des accords juridiquement solides.</li>
+                    </ul>
+                </div>
+                <div class="image-block placeholder-img">
+                    <span>Illustration : Roue de Fiutak / Processus</span>
                 </div>
             </div>
         </div>
@@ -235,6 +235,14 @@
             } else {
                 nav.style.display = 'block';
             }
+        });
+
+        // Close menu when a link is clicked
+        const navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                nav.style.display = 'none';
+            });
         });
     </script>
 </body>
