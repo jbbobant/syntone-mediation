@@ -13,13 +13,11 @@
 
     /* SPECIFIC ACCENT */
     --text-pink-accent: #EFD2E8;
-    /* Only for small text on dark backgrounds */
+    /* For small text on dark backgrounds */
 
     /* Standard Neutrals */
     --text-dark: #333333;
-    /* Main Body Text */
     --text-grey: #666666;
-    /* Subtitles on light backgrounds */
     --white: #ffffff;
 
     /* Font Settings */
@@ -107,6 +105,20 @@ ul {
     text-transform: uppercase;
 }
 
+/* Logo wrapper: image on left, text on right */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: -20px;
+}
+
+.brand-image {
+    height: 3rem;
+    width: auto;
+    display: block;
+}
+
 nav ul {
     display: flex;
     gap: 30px;
@@ -146,9 +158,10 @@ nav ul li a:hover {
 
 /* --- Hero Section --- */
 .hero {
-    height: 80vh;
-    /* Blue/Grey Gradient Overlay */
-    background: linear-gradient(rgba(34, 34, 34, 0.4), rgba(56, 76, 255, 0.3)), url('https://images.unsplash.com/photo-1573497620053-ea5300f94f21?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+    height: 85vh;
+    /* Slightly taller */
+    /* Updated gradient to be more professional */
+    background: linear-gradient(rgba(20, 30, 60, 0.6), rgba(56, 76, 255, 0.4)), url('https://images.unsplash.com/photo-1573497620053-ea5300f94f21?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
     position: relative;
     display: flex;
     align-items: center;
@@ -161,7 +174,7 @@ nav ul li a:hover {
     position: relative;
     z-index: 2;
     color: var(--white);
-    max-width: 700px;
+    max-width: 800px;
     padding: 40px;
     background: rgba(255, 255, 255, 0.95);
     border-radius: 4px;
@@ -170,13 +183,21 @@ nav ul li a:hover {
 
 .hero-content h1 {
     color: var(--primary-blue);
-    font-size: 3rem;
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-subtitle {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--text-dark);
     margin-bottom: 20px;
+    font-style: italic;
 }
 
 .hero-content p {
-    color: var(--text-dark);
-    font-size: 1.2rem;
+    color: var(--text-grey);
+    font-size: 1.1rem;
     margin-bottom: 30px;
 }
 
@@ -204,7 +225,7 @@ section {
 .section-title {
     text-align: center;
     font-size: 2.2rem;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     position: relative;
     color: var(--primary-blue);
 }
@@ -224,10 +245,8 @@ section {
 
 .section-dark {
     background-color: var(--bg-light-grey);
-    /* Now Light Grey instead of Yellow */
 }
 
-/* Special Dark Grey Section for Contact */
 .section-color {
     background-color: var(--bg-dark-grey);
     color: var(--white);
@@ -237,11 +256,18 @@ section {
     color: var(--white);
 }
 
+.section-intro-text {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px auto;
+    color: var(--text-grey);
+}
+
 /* --- Section 1: Definition --- */
 .content-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    gap: 50px;
     align-items: center;
 }
 
@@ -250,7 +276,7 @@ section {
 }
 
 .feature-list li {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     position: relative;
     padding-left: 25px;
 }
@@ -265,7 +291,7 @@ section {
 
 .placeholder-img {
     background-color: var(--bg-light-grey);
-    height: 300px;
+    height: 350px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -278,14 +304,18 @@ section {
 /* --- Section 2: Syntone --- */
 .content-centered {
     text-align: center;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
 .lead-text {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: var(--primary-blue);
+}
+
+.intro-syntone {
     margin-bottom: 50px;
-    font-style: italic;
     color: var(--text-grey);
 }
 
@@ -293,6 +323,7 @@ section {
     display: flex;
     justify-content: space-between;
     gap: 20px;
+    text-align: left;
 }
 
 .card {
@@ -315,12 +346,12 @@ section {
     margin-bottom: 15px;
 }
 
-/* --- Section 3: Prestations --- */
+/* --- Section 3: Prestations & Pricing --- */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
-    text-align: center;
+    margin-bottom: 60px;
 }
 
 .service-item {
@@ -337,46 +368,78 @@ section {
 }
 
 .service-item .icon {
-    /* This converts the text "family_restroom" into the actual Icon */
     font-family: 'Material Symbols Rounded';
-
-    /* Sizing and Spacing to fit the box */
     font-size: 3.5rem;
-    /* Large enough to be seen, small enough to fit */
     line-height: 1;
-    /* Prevents extra vertical spacing */
     margin-bottom: 20px;
     display: inline-block;
-
-    /* Color from your Blue/Grey palette */
     color: var(--primary-blue);
-
-    /* Refined Typography for the icon itself */
-    font-weight: normal;
-    font-style: normal;
-    letter-spacing: normal;
-    text-transform: none;
-    white-space: nowrap;
-    word-wrap: normal;
-    direction: ltr;
-
-    /* Modern Light/Thin Look settings */
-    font-variation-settings:
-        'FILL' 0,
-        'wght' 300,
-        /* 300 is thinner/elegant. Change to 400 for standard. */
-        'GRAD' 0,
-        'opsz' 48;
-
-    /* Smooth rendering */
-    -webkit-font-smoothing: antialiased;
+    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 48;
 }
 
-/* --- Section 4: Contact (Dark Grey BG) --- */
+.service-list-items li {
+    margin-bottom: 8px;
+    color: var(--text-grey);
+    font-size: 0.95rem;
+    border-bottom: 1px dashed #eee;
+    padding-bottom: 8px;
+}
+
+.service-list-items li:last-child {
+    border-bottom: none;
+}
+
+/* Pricing Box */
+.pricing-container {
+    display: flex;
+    justify-content: center;
+}
+
+.pricing-box {
+    background: var(--bg-light-grey);
+    border: 2px solid var(--primary-blue);
+    padding: 40px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+}
+
+.pricing-box .price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin: 10px 0;
+}
+
+.pricing-box .price-detail {
+    font-size: 1rem;
+    color: var(--text-grey);
+    font-weight: normal;
+}
+
+.pricing-box ul {
+    margin: 20px 0;
+    display: inline-block;
+    text-align: left;
+}
+
+.pricing-box ul li {
+    margin-bottom: 5px;
+    list-style: circle;
+}
+
+.pricing-box .price-note {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: var(--text-grey);
+    margin-top: 15px;
+}
+
+/* --- Section 4: Contact --- */
 .contact-subtitle {
     text-align: center;
     margin-bottom: 50px;
-    /* PINK TEXT on Dark Background */
     color: var(--text-pink-accent);
     font-weight: 400;
 }
@@ -390,15 +453,30 @@ section {
 .contact-info h3 {
     color: var(--white);
     border-bottom: 1px solid var(--text-pink-accent);
-    /* Pink underline */
     padding-bottom: 15px;
     display: inline-block;
+    margin-bottom: 20px;
 }
 
-.contact-info p {
-    margin-bottom: 15px;
+.address-block p {
+    margin-bottom: 20px;
     font-size: 1.1rem;
     color: #e0e0e0;
+}
+
+.phone-label {
+    color: var(--text-pink-accent);
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.phone-list li {
+    margin-bottom: 8px;
+    color: #e0e0e0;
+}
+
+.phone-list strong {
+    color: var(--white);
 }
 
 .map-placeholder {
@@ -411,14 +489,12 @@ section {
     justify-content: center;
     border: 1px solid rgba(255, 255, 255, 0.1);
     color: var(--text-pink-accent);
-    /* Pink Text */
 }
 
 .contact-form {
     background: var(--white);
     padding: 30px;
     border-radius: 4px;
-    color: var(--text-dark);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -471,7 +547,6 @@ section {
 /* --- Footer --- */
 footer {
     background: #1a1a1a;
-    /* Slightly darker than Contact section */
     color: #888;
     padding: 30px 0;
     text-align: center;
@@ -487,7 +562,6 @@ footer {
 }
 
 .footer-links a {
-    /* PINK TEXT on Dark Background */
     color: var(--text-pink-accent);
     text-transform: uppercase;
     font-size: 0.8rem;
