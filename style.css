@@ -67,7 +67,7 @@ ul {
     padding: 0 20px;
 }
 
-/* --- Header --- */
+/* --- Header Base --- */
 #main-header {
     background: var(--white);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
@@ -85,6 +85,28 @@ ul {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: nowrap;
+    /* CRUCIAL : Empêche les éléments de passer à la ligne */
+}
+
+/* --- Logo Area --- */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+    /* Empêche le logo de se faire écraser */
+    text-decoration: none;
+}
+
+.brand-image {
+    height: 50px;
+    /* Ajusté pour bien s'intégrer dans les 80px du header */
+    width: auto;
+    display: block;
 }
 
 .logo-text {
@@ -94,6 +116,8 @@ ul {
     display: flex;
     flex-direction: column;
     line-height: 1.2;
+    white-space: nowrap;
+    /* Le nom ne passe jamais à la ligne */
 }
 
 .logo-text .subtitle {
@@ -105,24 +129,23 @@ ul {
     text-transform: uppercase;
 }
 
-/* Logo wrapper: image on left, text on right */
-.logo {
+/* --- Navigation (Desktop) --- */
+nav {
     display: flex;
     align-items: center;
-    gap: 12px;
-    margin-left: -20px;
-}
-
-.brand-image {
-    height: 3rem;
-    width: auto;
-    display: block;
 }
 
 nav ul {
     display: flex;
-    gap: 30px;
+    gap: 25px;
+    /* Espace optimisé entre les liens */
     align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none;
 }
 
 nav ul li a {
@@ -131,6 +154,9 @@ nav ul li a {
     color: var(--text-dark);
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    white-space: nowrap;
+    /* CRUCIAL : Corrige le bug de la capture d'écran */
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
@@ -142,6 +168,9 @@ nav ul li a:hover {
     color: var(--white) !important;
     padding: 10px 20px;
     border-radius: 30px;
+    white-space: nowrap;
+    /* CRUCIAL : Le bouton reste intact */
+    display: inline-block;
 }
 
 .btn-contact:hover {
@@ -151,70 +180,70 @@ nav ul li a:hover {
 
 .mobile-menu-icon {
     display: none;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     cursor: pointer;
     color: var(--primary-blue);
+    flex-shrink: 0;
 }
 
-/* Responsive: Three-tier layout system */
 
-/* Tier 1: Small phones - SYNTONE MEDIATION + hamburger menu */
-@media (max-width: 640px) {
-    .brand-image {
-        display: none;
-    }
+/* =========================================================
+   RESPONSIVE UX : GESTION DES POINTS DE RUPTURE (BREAKPOINTS)
+   ========================================================= */
 
-    .logo {
-        margin-left: 0;
-        gap: 0;
-    }
-
-    nav {
-        display: none;
+/* 1. Tablettes horizontales & Petits ordis (< 1150px)
+   On bascule sur le burger AVANT que le texte ne s'écrase. 
+   Affiche : Bandeau + Syntone + Burger */
+@media (max-width: 1150px) {
+    .header-container {
+        position: relative;
     }
 
     .mobile-menu-icon {
         display: block;
     }
-}
 
-/* Tier 2: Tablets - Band + SYNTONE MEDIATION + hamburger menu */
-@media (min-width: 641px) and (max-width: 1024px) {
-    .brand-image {
-        display: block;
-    }
-
-    .logo {
-        margin-left: -20px;
-        gap: 12px;
-    }
-
+    /* Transformation de la nav en menu déroulant mobile */
     nav {
         display: none;
+        /* Caché par défaut, ouvert par le Javascript */
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        border-top: 1px solid #eee;
     }
 
-    .mobile-menu-icon {
-        display: block;
+    nav ul {
+        flex-direction: column;
+        padding: 20px;
+        align-items: flex-start;
+        gap: 15px;
     }
 }
 
-/* Tier 3: Desktop - Band + SYNTONE MEDIATION + full text menu */
-@media (min-width: 1025px) {
+/* 2. Mobiles & Tablettes verticales (< 768px)
+   On manque de place pour tout.
+   Affiche : Syntone + Burger */
+@media (max-width: 768px) {
     .brand-image {
-        display: block;
-    }
-
-    .logo {
-        margin-left: -20px;
-        gap: 12px;
-    }
-
-    nav {
-        display: flex;
-    }
-
-    .mobile-menu-icon {
         display: none;
+        /* On sacrifie le bandeau pour l'espace */
+    }
+}
+
+/* 3. Petits mobiles (< 450px)
+   Affiche : Syntone (réduit) + Burger */
+@media (max-width: 450px) {
+    .logo-text {
+        font-size: 1.2rem;
+        /* On diminue la taille du texte de la marque */
+    }
+
+    .logo-text .subtitle {
+        font-size: 0.7rem;
     }
 }
 
