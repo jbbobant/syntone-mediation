@@ -4,24 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Syntone Médiation - Avocats Médiateurs à Voiron</title>
+    <title>Syntone Médiation — Avocats Médiateurs à Voiron</title>
+    <meta name="description"
+        content="Syntone Médiation accompagne particuliers et professionnels dans la résolution amiable de leurs conflits à Voiron. Trois avocates médiatrices diplômées.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="style.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap"
-        rel="stylesheet">
 </head>
 
 <body>
 
+    <!-- ============================================================
+         HEADER
+         ============================================================ -->
     <header id="main-header">
-        <div class="container header-container">
+        <img src="assets/band.jpeg" alt="" class="brand-image-flush" aria-hidden="true">
+        <div class="header-inner">
             <div class="logo">
-                <img src="assets/band.jpeg" alt="SYNTONE logo" class="brand-image">
-                <a href="#home" class="logo-text">SYNTONE <span class="subtitle">Médiation</span></a>
+                <a href="#home" class="logo-text" aria-label="Syntone Médiation — accueil">
+                    SYNTONE <span class="subtitle">Médiation</span>
+                </a>
             </div>
-            <nav>
+
+            <nav id="main-nav" aria-label="Navigation principale">
                 <ul>
                     <li><a href="#syntone">L'approche Syntone</a></li>
                     <li><a href="#mediation">La Médiation</a></li>
@@ -29,141 +40,185 @@
                     <li><a href="#contact" class="btn-contact">Nous contacter</a></li>
                 </ul>
             </nav>
-            <div class="mobile-menu-icon">
-                <span>&#9776;</span>
-            </div>
+
+            <button class="mobile-menu-icon" id="burger-btn" aria-label="Ouvrir le menu" aria-expanded="false"
+                aria-controls="main-nav">
+                <span class="burger-bar"></span>
+                <span class="burger-bar"></span>
+                <span class="burger-bar"></span>
+            </button>
         </div>
     </header>
 
-    <section id="home" class="hero">
-        <div class="hero-overlay"></div>
+    <!-- ============================================================
+         HERO
+         ============================================================ -->
+    <section id="home" class="hero" aria-label="Accueil">
         <div class="hero-content">
             <h1>Syntone Médiation</h1>
             <p class="hero-subtitle">Bâtir ensemble la résolution de votre conflit.</p>
-            <p>Une alternative amiable pour renouer le dialogue et trouver des solutions durables.</p>
             <a href="#contact" class="btn-main">Prendre rendez-vous</a>
         </div>
     </section>
 
+    <!-- ============================================================
+         L'APPROCHE SYNTONE
+         ============================================================ -->
     <section id="syntone" class="section-light">
         <div class="container">
             <h2 class="section-title">L'approche Syntone</h2>
             <div class="content-centered">
-                <p class="lead-text">"Syntone" vient du grec <em>sýntonon</em> : « qui vibre à la même fréquence ». Être
-                    syntone, c'est être en accord, ajusté, à l'écoute fine de ce qui se joue entre les personnes.</p>
-
+                <p class="lead-text">
+                    Syntone vient du grec <em>sýntonon</em> : « qui vibre à la même fréquence ». Être syntone,
+                    c'est être en accord, ajusté, à l'écoute fine de ce qui se joue entre les personnes.
+                    Cette posture fonde notre pratique de la médiation.
+                </p>
                 <div class="intro-syntone">
-                    <p>Le réseau Syntone Médiation est fondé par <strong>trois médiatrices diplômées et expérimentées,
-                            toutes avocates</strong>. Notre conviction est simple : les conflits peuvent être traités
-                        autrement.</p>
+                    <p>
+                        Le réseau Syntone Médiation accompagne les personnes et les organisations publiques et privées
+                        dans la résolution amiable de leurs conflits.
+                        <strong>Il est fondé par trois médiatrices diplômées et expérimentées, toutes avocates,</strong>
+                        qui pratiquent la médiation principalement en co-médiation et dont l'approche repose sur&nbsp;:
+                    </p>
                 </div>
 
                 <div class="cards-container">
                     <div class="card">
-                        <h3>Processus Structuré</h3>
+                        <h3>Processus structuré et sécurisé</h3>
                         <p>Nous utilisons une méthode rigoureuse (basée notamment sur la roue de Fiutak) pour traverser
-                            les émotions, clarifier les besoins et aboutir à des solutions concrètes.</p>
+                            les émotions, clarifier les besoins et aboutir à des solutions concrètes et durables,
+                            dans un cadre juridiquement sécurisé.</p>
                     </div>
                     <div class="card">
-                        <h3>Sécurité Juridique</h3>
-                        <p>En tant qu'avocates médiatrices, nous garantissons que les accords trouvés respectent le
-                            cadre légal et peuvent être homologués par un juge.</p>
+                        <h3>Construction de solutions par les médiés</h3>
+                        <p>Les personnes en conflit restent pleinement actrices des solutions qu'elles construisent
+                            ensemble. Notre rôle est de faciliter ce processus pour aboutir à des accords concrets
+                            et durables.</p>
                     </div>
                     <div class="card">
-                        <h3>Co-Médiation</h3>
-                        <p>Nous pratiquons principalement la médiation à plusieurs regards pour offrir un accompagnement
-                            encore plus complet et équilibré.</p>
+                        <h3>Maîtrise des coûts et des délais</h3>
+                        <p>La médiation offre une alternative rapide et à coût maîtrisé par rapport aux procédures
+                            judiciaires, avec des tarifs clairs et transparents dès le départ.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- ============================================================
+         QU'EST-CE QUE LA MÉDIATION ?
+         ============================================================ -->
     <section id="mediation" class="section-dark">
         <div class="container">
-            <h2 class="section-title">Qu'est-ce que la médiation ?</h2>
+            <h2 class="section-title">Qu'est-ce que la médiation&nbsp;?</h2>
             <div class="content-grid">
                 <div class="text-block">
                     <p>La médiation est un processus volontaire et structuré qui permet aux personnes en conflit de
                         redevenir actrices de la résolution de leur litige, sans passer par l'affrontement judiciaire.
                     </p>
                     <p>Elle est facilitée par un médiateur professionnel, tiers neutre, impartial et indépendant. Notre
-                        rôle n'est pas de trancher, mais de favoriser l'écoute et la compréhension pour construire une
-                        solution sur-mesure.</p>
-                    <ul class="feature-list">
-                        <li><strong>Rapide :</strong> Une résolution bien plus véloce que les délais judiciaires.</li>
-                        <li><strong>Coût maîtrisé :</strong> Des tarifs clairs et inférieurs à une procédure longue.
+                        rôle n'est pas de trancher, mais de favoriser l'écoute et la compréhension pour construire
+                        une solution sur-mesure.</p>
+                    <ul class="feature-list" aria-label="Avantages de la médiation">
+                        <li><strong>Rapide&nbsp;:</strong> Une résolution bien plus véloce que les délais judiciaires.
                         </li>
-                        <li><strong>Confidentiel :</strong> Les échanges sont couverts par un strict secret.</li>
-                        <li><strong>Sécurisé :</strong> Des accords juridiquement solides.</li>
+                        <li><strong>Coût maîtrisé&nbsp;:</strong> Des tarifs clairs et inférieurs à une procédure
+                            longue.</li>
+                        <li><strong>Confidentiel&nbsp;:</strong> Les échanges sont couverts par un strict secret.</li>
+                        <li><strong>Sécurisé&nbsp;:</strong> Des accords juridiquement solides, homologables par un
+                            juge.</li>
                     </ul>
                 </div>
-                <div class="image-block placeholder-img">
-                    <span>Illustration : Roue de Fiutak / Processus</span>
-                </div>
+                <figure class="fiutak-frame" aria-label="Roue de Fiutak">
+                    <div class="fiutak-frame__inner">
+                        <img src="assets/Fiutak.png"
+                            alt="Roue de Fiutak illustrant les 4 étapes du processus de médiation : Quoi, Pourquoi, Et si, Comment"
+                            class="fiutak-img">
+                    </div>
+                    <figcaption class="fiutak-frame__caption">
+                        Roue de Fiutak — Les 4 étapes du processus de médiation
+                    </figcaption>
+                </figure>
             </div>
         </div>
     </section>
 
+    <!-- ============================================================
+         NOS DOMAINES D'INTERVENTION
+         ============================================================ -->
     <section id="prestation" class="section-light">
         <div class="container">
             <h2 class="section-title">Nos Domaines d'Intervention</h2>
-            <p class="section-intro-text">Nous intervenons pour les particuliers et les professionnels pour rétablir la
-                communication et construire des accords.</p>
+            <p class="section-intro-text">
+                Nous intervenons pour les particuliers et les professionnels afin de rétablir
+                la communication et construire des accords durables.
+            </p>
 
             <div class="services-grid">
-                <div class="service-item">
-                    <div class="icon">family_restroom</div>
-                    <h3>Vie Personnelle & Familiale</h3>
-                    <ul class="service-list-items">
-                        <li>Séparations & Divorces</li>
-                        <li>Conséquences financières</li>
-                        <li>Résidence des enfants</li>
-                        <li>Successions & Indivision</li>
-                        <li>Conflits intergénérationnels</li>
-                    </ul>
+
+                <!-- Carte fusionnée : Vie personnelle + Logement & Voisinage -->
+                <div class="service-item service-item--merged">
+                    <div class="service-sub">
+                        <div class="icon" aria-hidden="true">family_restroom</div>
+                        <h3>Vie Personnelle &amp; Familiale</h3>
+                        <ul class="service-list-items" aria-label="Exemples de situations">
+                            <li>Séparations &amp; Divorces et leurs conséquences financières</li>
+                            <li>Résidence des enfants, droits de visite</li>
+                            <li>Successions &amp; Indivision</li>
+                            <li>Conflits intergénérationnels</li>
+                        </ul>
+                    </div>
+                    <div class="service-divider"></div>
+                    <div class="service-sub">
+                        <div class="icon" aria-hidden="true">house</div>
+                        <h3>Logement &amp; Voisinage</h3>
+                        <ul class="service-list-items" aria-label="Exemples de situations">
+                            <li>Conflits de voisinage</li>
+                            <li>Différends locatifs</li>
+                            <li>Copropriétés</li>
+                            <li>Autorisations d'urbanisme</li>
+                            <li>Troubles de jouissance</li>
+                        </ul>
+                    </div>
+                    <div class="service-pricing-inline">
+                        <div class="pricing-tag">
+                            <span class="pricing-tag__amount">720&nbsp;€ TTC</span>
+                            <span class="pricing-tag__per">/ personne</span>
+                        </div>
+                        <ul class="pricing-tag__details">
+                            <li>1 entretien individuel (≈ 1h30)</li>
+                            <li>1 réunion commune encadrée (≈ 2h30)</li>
+                        </ul>
+                        <p class="pricing-tag__note">Dans de nombreux cas, une seule réunion suffit.
+                            Pour les situations spécifiques, nous proposons un devis personnalisé.</p>
+                    </div>
                 </div>
 
-                <div class="service-item">
-                    <div class="icon">house</div>
-                    <h3>Logement & Voisinage</h3>
-                    <ul class="service-list-items">
-                        <li>Conflits de voisinage</li>
-                        <li>Différends locatifs</li>
-                        <li>Copropriétés</li>
-                        <li>Autorisations d'urbanisme</li>
-                        <li>Troubles de jouissance</li>
-                    </ul>
-                </div>
-
-                <div class="service-item">
-                    <div class="icon">handshake</div>
+                <!-- Carte Vie Professionnelle -->
+                <div class="service-item service-item--pro">
+                    <div class="icon" aria-hidden="true">handshake</div>
                     <h3>Vie Professionnelle</h3>
-                    <ul class="service-list-items">
+                    <ul class="service-list-items" aria-label="Exemples de situations">
                         <li>Conflits entre salariés ou collaborateurs</li>
                         <li>Conflits entre associés et dirigeants</li>
-                        <li>Relations partenaires commerciaux</li>
+                        <li>Relations entre partenaires commerciaux ou institutionnels</li>
                         <li>Souffrance au travail</li>
                     </ul>
-                </div>
-            </div>
-
-            <div class="pricing-container">
-                <div class="pricing-box">
-                    <h3>Tarif Forfaitaire</h3>
-                    <div class="price">720 € TTC <span class="price-detail">/ personne</span></div>
-                    <p class="price-desc">Ce forfait comprend :</p>
-                    <ul>
-                        <li>1 entretien individuel (≈ 1h30)</li>
-                        <li>1 réunion commune encadrée (≈ 2h30)</li>
-                    </ul>
-                    <p class="price-note">Dans de nombreux cas, une seule réunion suffit. Pour les situations
-                        spécifiques, nous proposons un devis personnalisé.</p>
+                    <div class="service-pricing-inline service-pricing-inline--devis">
+                        <div class="pricing-tag">
+                            <span class="pricing-tag__amount">Sur devis</span>
+                        </div>
+                        <p class="pricing-tag__note">Devis personnalisé selon la nature et la complexité de la
+                            situation.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- ============================================================
+         CONTACT
+         ============================================================ -->
     <section id="contact" class="section-color">
         <div class="container">
             <h2 class="section-title white-text">Nous Contacter</h2>
@@ -172,78 +227,120 @@
             <div class="contact-wrapper">
                 <div class="contact-info">
                     <h3>Syntone Médiation</h3>
+
                     <div class="address-block">
                         <p>📍 58, cours Becquart Castelbon<br>38500 VOIRON</p>
                     </div>
 
                     <div class="phones-block">
-                        <p class="phone-label">Vos médiatrices :</p>
+                        <p class="phone-label">Vos médiatrices</p>
                         <ul class="phone-list">
-                            <li><strong>Marie-Xavière BILLET</strong> : 07 56 98 64 89</li>
-                            <li><strong>Mélanie CELLIER</strong> : 04 58 00 88 59</li>
-                            <li><strong>Valérie GODE</strong> : 04 38 70 15 20</li>
+                            <li>
+                                <strong>Marie-Xavière BILLET</strong>
+                                <a href="tel:+33756986489"
+                                    style="color:#d0d0e0; margin-left:6px;">07&nbsp;56&nbsp;98&nbsp;64&nbsp;89</a>
+                            </li>
+                            <li>
+                                <strong>Mélanie CELLIER</strong>
+                                <a href="tel:+33458008859"
+                                    style="color:#d0d0e0; margin-left:6px;">04&nbsp;58&nbsp;00&nbsp;88&nbsp;59</a>
+                            </li>
+                            <li>
+                                <strong>Valérie GODE</strong>
+                                <a href="tel:+33438701520"
+                                    style="color:#d0d0e0; margin-left:6px;">04&nbsp;38&nbsp;70&nbsp;15&nbsp;20</a>
+                            </li>
                         </ul>
                     </div>
 
-                    <div class="map-placeholder">
-                        Plan d'accès Voiron
+                    <div class="map-embed">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2803.3272443001815!2d5.587907226268456!3d45.36239112107253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478ae438639c8d69%3A0xa87cf9aa230d9390!2sC.C.A.S%20(Centre%20Communal%20d&#39;Action%20Social)%20de%20Voiron!5e0!3m2!1sfr!2sar!4v1776625318694!5m2!1sfr!2sar"
+                            width="100%" height="200" style="border:0; filter:grayscale(15%) contrast(1.05);"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                            title="Localisation de Syntone Médiation, 58 cours Becquart Castelbon, Voiron">
+                        </iframe>
                     </div>
                 </div>
 
-                <form class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Nom & Prénom</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Téléphone</label>
-                        <input type="tel" id="phone" name="phone">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Votre message</label>
-                        <textarea id="message" name="message" rows="5" required
-                            placeholder="Décrivez brièvement votre situation..."></textarea>
-                    </div>
-                    <button type="submit" class="btn-submit">Envoyer la demande</button>
-                </form>
+                <div class="contact-email-block">
+                    <h3>Prendre contact</h3>
+                    <p class="contact-email-desc">
+                        Vous pouvez nous écrire directement par email — nous vous répondrons dans les meilleurs délais.
+                    </p>
+                    <a href="mailto:contact@syntone-mediation.fr" class="contact-email-link">
+                        <span class="contact-email-icon" aria-hidden="true">✉</span>
+                        contact@syntone-mediation.fr
+                    </a>
+                    <p class="contact-email-note">
+                        Vous pouvez également nous joindre directement par téléphone auprès de l'une de nos médiatrices,
+                        dont les coordonnées figurent ci-contre.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- ============================================================
+         FOOTER
+         ============================================================ -->
     <footer>
-        <div class="container footer-content">
+        <div class="container">
             <p>&copy; 2025 Syntone Médiation. Tous droits réservés.</p>
-            <ul class="footer-links">
-                <li><a href="#">Mentions Légales</a></li>
-                <li><a href="#">Politique de confidentialité</a></li>
-            </ul>
         </div>
     </footer>
 
+    <!-- ============================================================
+         SCRIPTS
+         ============================================================ -->
     <script>
-        // Simple Mobile Menu Toggle
-        const menuIcon = document.querySelector('.mobile-menu-icon');
-        const nav = document.querySelector('nav');
+        (function () {
+            const burgerBtn = document.getElementById('burger-btn');
+            const nav = document.getElementById('main-nav');
 
-        menuIcon.addEventListener('click', () => {
-            if (nav.style.display === 'block') {
-                nav.style.display = 'none';
-            } else {
-                nav.style.display = 'block';
+            function toggleMenu(open) {
+                const isOpen = open !== undefined ? open : !nav.classList.contains('nav-open');
+                nav.classList.toggle('nav-open', isOpen);
+                burgerBtn.classList.toggle('is-open', isOpen);
+                burgerBtn.setAttribute('aria-expanded', String(isOpen));
+                burgerBtn.setAttribute('aria-label', isOpen ? 'Fermer le menu' : 'Ouvrir le menu');
             }
-        });
 
-        // Close menu when a link is clicked
-        const navLinks = document.querySelectorAll('nav a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                nav.style.display = 'none';
+            // Burger click
+            burgerBtn.addEventListener('click', () => toggleMenu());
+
+            // Close when a nav link is clicked
+            nav.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => toggleMenu(false));
             });
-        });
+
+            // Close on Escape key
+            document.addEventListener('keydown', e => {
+                if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+                    toggleMenu(false);
+                    burgerBtn.focus();
+                }
+            });
+
+            // Close when clicking outside
+            document.addEventListener('click', e => {
+                if (nav.classList.contains('nav-open') &&
+                    !nav.contains(e.target) &&
+                    !burgerBtn.contains(e.target)) {
+                    toggleMenu(false);
+                }
+            });
+
+            // On resize back to desktop: reset menu state
+            const mq = window.matchMedia('(min-width: 1051px)');
+            mq.addEventListener('change', e => {
+                if (e.matches) {
+                    nav.classList.remove('nav-open');
+                    burgerBtn.classList.remove('is-open');
+                    burgerBtn.setAttribute('aria-expanded', 'false');
+                }
+            });
+        })();
     </script>
 </body>
 
